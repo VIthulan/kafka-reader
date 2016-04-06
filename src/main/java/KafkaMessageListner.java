@@ -17,9 +17,10 @@ public class KafkaMessageListner extends AbstractKafkaMessageListner {
     private ExecutorService executor;
 
 
-    private final String zookeeper_session_time_out = "400";
-    private final String zookeeper_sync_time_out = "200";
-    private final String commit_interval = "1000";
+    private String zookeeper_session_time_out = "400";
+    private String zookeeper_sync_time_out = "200";
+    private String commit_interval = "1000";
+    private TCPClient tcpClient;
 
 
     @Override
@@ -34,6 +35,15 @@ public class KafkaMessageListner extends AbstractKafkaMessageListner {
         }
     }
 
+    public void initZooKeeper (String zookeeper_session_time_out, String zookeeper_sync_time_out, String commit_interval){
+        this.zookeeper_session_time_out = zookeeper_session_time_out;
+        this.zookeeper_sync_time_out = zookeeper_sync_time_out;
+        this.commit_interval = commit_interval;
+    }
+
+    public void initTCPClient (String host, int port){
+        tcpClient = new TCPClient(host,port);
+    }
 
     @Override
     public boolean createKafkaConnector(int threadsCount) throws Exception {
@@ -79,7 +89,7 @@ public class KafkaMessageListner extends AbstractKafkaMessageListner {
                 int threadNumber = 0;
                 for (final KafkaStream stream : streams) {
                     System.out.println("Thread number "+threadNumber);
-                    executor.submit(new KafkaConsumer(stream, threadNumber));
+                    executor.submit(new KafkaConsumer(stream, threadNumber,tcpClient));
                     threadNumber++;
                 }
             }

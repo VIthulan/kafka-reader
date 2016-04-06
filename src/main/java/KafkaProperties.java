@@ -33,8 +33,8 @@ public class KafkaProperties {
         properties.put(zookeeper_session_timeout_ms,zookeeper_session_time_out);
         properties.put(zookeeper_sync_time_ms,zookeeper_sync_time);
         properties.put(auto_commit_interval_ms,commit_interval);
-        properties.put(KafkaConstants.AUTO_OFFSET_RESET,"smallest");
-        properties.put(KafkaConstants.CONSUMER_TIMEOUT_MS,"10");
+        /*properties.put(KafkaConstants.AUTO_OFFSET_RESET,"smallest");
+        properties.put(KafkaConstants.CONSUMER_TIMEOUT_MS,"10");*/
 
         return new ConsumerConfig(properties);
     }
