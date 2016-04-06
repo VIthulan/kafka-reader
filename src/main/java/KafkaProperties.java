@@ -17,29 +17,34 @@ public class KafkaProperties {
     private String zookeeper_sync_time;
     private String commit_interval;
 
-    public KafkaProperties (String zookeeper_host, String group_id_name, String zookeeper_session_time_out,
-                            String zookeeper_sync_time, String commit_interval) {
+    private Properties properties = new Properties();
+
+    public KafkaProperties(String zookeeper_host, String group_id_name, String zookeeper_session_time_out,
+                           String zookeeper_sync_time, String commit_interval) {
         this.zookeeper_host = zookeeper_host;
         this.group_id_name = group_id_name;
         this.zookeeper_session_time_out = zookeeper_session_time_out;
         this.zookeeper_sync_time = zookeeper_sync_time;
         this.commit_interval = commit_interval;
+        setProperties();
     }
 
-    public ConsumerConfig setProperties(){
-        Properties properties = new Properties();
-        properties.put(zookeeper_connect,zookeeper_host);
-        properties.put(group_id,group_id_name);
-        properties.put(zookeeper_session_timeout_ms,zookeeper_session_time_out);
-        properties.put(zookeeper_sync_time_ms,zookeeper_sync_time);
-        properties.put(auto_commit_interval_ms,commit_interval);
+    public void setProperties() {
+        properties.put(zookeeper_connect, zookeeper_host);
+        properties.put(group_id, group_id_name);
+        properties.put(zookeeper_session_timeout_ms, zookeeper_session_time_out);
+        properties.put(zookeeper_sync_time_ms, zookeeper_sync_time);
+        properties.put(auto_commit_interval_ms, commit_interval);
+
         /*properties.put(KafkaConstants.AUTO_OFFSET_RESET,"smallest");
         properties.put(KafkaConstants.CONSUMER_TIMEOUT_MS,"10");*/
-
-        return new ConsumerConfig(properties);
     }
 
-    public ConsumerConfig getConsumerConfig(){
-        return setProperties();
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
     }
 }

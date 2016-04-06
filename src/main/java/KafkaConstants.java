@@ -14,10 +14,9 @@ public class KafkaConstants {
 
     public static final String TOPICS = "topics";
 
-    public static final String AUTO_OFFSET_RESET ="auto.offset.reset";
+    public static final String AUTO_OFFSET_RESET = "auto.offset.reset";
 
     public static final String CONSUMER_TIMEOUT_MS = "consumer.timeout.ms";
-
 
 
 }

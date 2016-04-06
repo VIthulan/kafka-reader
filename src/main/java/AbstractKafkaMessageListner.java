@@ -2,7 +2,11 @@ import kafka.consumer.ConsumerIterator;
 import kafka.javaapi.consumer.ConsumerConnector;
 
 import java.util.List;
+import java.util.Properties;
 
+/**
+ * Abstract class of MessageListner
+ */
 public abstract class AbstractKafkaMessageListner {
 
     protected int threadCount;
@@ -10,20 +14,48 @@ public abstract class AbstractKafkaMessageListner {
     protected ConsumerConnector consumerConnector;
     protected List<ConsumerIterator<byte[], byte[]>> consumerIteraror;
 
-    public abstract void init(String zookeeper_host, String group_id_name, int threadsCount, List<String> topics);
-    public abstract boolean createKafkaConnector (int threadsCount) throws Exception;
+    /**
+     * Initiate message listener
+     *
+     * @param properties properties for consumer
+     * @param topic      list of topics to consume messages
+     */
+    public abstract void init(Properties properties, List<String> topic);
 
+    /**
+     * It will create consumer connector
+     *
+     * @param threadsCount number of threads to run
+     * @return true if successfully created
+     * @throws Exception
+     */
+    public abstract boolean createKafkaConnector(int threadsCount) throws Exception;
+
+    /**
+     * It will initiate consumers and start the thread pooling
+     *
+     * @param threadCount number of threads to be in thread pool
+     * @throws Exception
+     */
     public abstract void start(int threadCount) throws Exception;
-
-    public void destroy(){}
 
     public abstract boolean hasNext();
 
-    public boolean hasMultipleTopicsToConsume(){
+    /**
+     * checks multiple topics
+     *
+     * @return
+     */
+    public boolean hasMultipleTopicsToConsume() {
         return false;
     }
 
-    public void consumeMultipleTopics (String name){
+    /**
+     * Configuration for multiple topics
+     *
+     * @param name
+     */
+    public void consumeMultipleTopics(String name) {
 
     }
 }
