@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.kafka:kafka_2.10:0.9.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka_2.10/0.9.0.1/ae42bba7f83d3a9d0351debdf73e719d36317e57/kafka_2.10-0.9.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka_2.10/0.9.0.1/dde47c6278054dd65e73079b2022cfdcf6747de4/kafka_2.10-0.9.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
