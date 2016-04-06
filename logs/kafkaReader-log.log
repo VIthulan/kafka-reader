@@ -1,0 +1,54 @@
+2016-04-06 18:53:35 INFO  KafkaMessageListner:32 - Kafka consumer properties are set successfully
+2016-04-06 18:53:36 INFO  VerifiableProperties:68 - Verifying properties
+2016-04-06 18:53:36 INFO  VerifiableProperties:68 - Property auto.commit.interval.ms is overridden to 1000
+2016-04-06 18:53:36 INFO  VerifiableProperties:68 - Property group.id is overridden to groupid11
+2016-04-06 18:53:36 INFO  VerifiableProperties:68 - Property zookeeper.connect is overridden to localhost:2181
+2016-04-06 18:53:36 INFO  VerifiableProperties:68 - Property zookeeper.session.timeout.ms is overridden to 400
+2016-04-06 18:53:36 INFO  VerifiableProperties:68 - Property zookeeper.sync.time.ms is overridden to 200
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], Connecting to zookeeper instance at localhost:2181
+2016-04-06 18:53:36 INFO  ZkEventThread:64 - Starting ZkClient event thread.
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:host.name=vithulan-ThinkPad-T530
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:java.version=1.8.0_65
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:java.vendor=Oracle Corporation
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:java.home=/usr/local/java/jdk1.8.0_65/jre
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:java.class.path=/usr/local/java/jdk1.8.0_65/jre/lib/charsets.jar:/usr/local/java/jdk1.8.0_65/jre/lib/javaws.jar:/usr/local/java/jdk1.8.0_65/jre/lib/jce.jar:/usr/local/java/jdk1.8.0_65/jre/lib/jfr.jar:/usr/local/java/jdk1.8.0_65/jre/lib/plugin.jar:/usr/local/java/jdk1.8.0_65/jre/lib/management-agent.jar:/usr/local/java/jdk1.8.0_65/jre/lib/rt.jar:/usr/local/java/jdk1.8.0_65/jre/lib/resources.jar:/usr/local/java/jdk1.8.0_65/jre/lib/jfxswt.jar:/usr/local/java/jdk1.8.0_65/jre/lib/jsse.jar:/usr/local/java/jdk1.8.0_65/jre/lib/deploy.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/zipfs.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/localedata.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/sunpkcs11.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/sunec.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/dnsns.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/sunjce_provider.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/cldrdata.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/nashorn.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/jaccess.jar:/usr/local/java/jdk1.8.0_65/jre/lib/ext/jfxrt.jar:/home/vithulan/IdeaProjects/kafka-reader/build/classes/main:/home/vithulan/IdeaProjects/kafka-reader/build/resources/main:/home/vithulan/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka_2.10/0.9.0.1/ae42bba7f83d3a9d0351debdf73e719d36317e57/kafka_2.10-0.9.0.1.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/com.101tec/zkclient/0.7/e01775a1767d39a549959a8ab51ef7608f52e986/zkclient-0.7.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/org.apache.kafka/kafka-clients/0.9.0.1/5a8947440a048280a4314949771769bb425c12ce/kafka-clients-0.9.0.1.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/com.yammer.metrics/metrics-core/2.2.0/f82c035cfa786d3cbec362c38c22a5f5b1bc8724/metrics-core-2.2.0.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-library/2.10.5/57ac67a6cf6fd591e235c62f8893438e8d10431d/scala-library-2.10.5.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/3.2/d625f12ba08083c8c16dcedd5396ec730e9e77ab/jopt-simple-3.2.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.6/6953717b9850aeb26d1b8375ca07dbd9c50eca4e/slf4j-log4j12-1.7.6.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.4.6/1b2502e29da1ebaade2357cd1de35a855fa3755/zookeeper-3.4.6.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/org.xerial.snappy/snappy-java/1.1.1.7/33b6965e9364145972035c30a45a996aad2bf789/snappy-java-1.1.1.7.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/net.jpountz.lz4/lz4/1.2.0/cd301e9a481eae5b68c53267100aeca43b782b9f/lz4-1.2.0.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/jline/jline/0.9.94/99a18e9a44834afdebc467294e1138364c207402/jline-0.9.94.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/io.netty/netty/3.7.0.Final/7a8c35599c68c0bf383df74469aa3e03d9aca87/netty-3.7.0.Final.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/junit/junit/3.8.1/99129f16442844f6a4a11ae22fbbee40b14d774f/junit-3.8.1.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.6/562424e36df3d2327e8e9301a76027fca17d54ea/slf4j-api-1.7.6.jar:/home/vithulan/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/home/vithulan/IdeaJ/idea-IU-139.1603.1/lib/idea_rt.jar
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:java.library.path=/home/vithulan/IdeaJ/idea-IU-139.1603.1/bin::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:java.io.tmpdir=/tmp
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:java.compiler=<NA>
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:os.name=Linux
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:os.arch=amd64
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:os.version=4.2.0-34-generic
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:user.name=vithulan
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:user.home=/home/vithulan
+2016-04-06 18:53:36 INFO  ZooKeeper:100 - Client environment:user.dir=/home/vithulan/IdeaProjects/kafka-reader
+2016-04-06 18:53:36 INFO  ZooKeeper:438 - Initiating client connection, connectString=localhost:2181 sessionTimeout=400 watcher=org.I0Itec.zkclient.ZkClient@44a664f2
+2016-04-06 18:53:36 INFO  ZkClient:934 - Waiting for keeper state SyncConnected
+2016-04-06 18:53:36 INFO  ClientCnxn:975 - Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-04-06 18:53:36 INFO  ClientCnxn:852 - Socket connection established to localhost/127.0.0.1:2181, initiating session
+2016-04-06 18:53:36 INFO  ClientCnxn:1235 - Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x153eab231730006, negotiated timeout = 6000
+2016-04-06 18:53:36 INFO  ZkClient:711 - zookeeper state changed (SyncConnected)
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], starting auto committer every 1000 ms
+2016-04-06 18:53:36 INFO  KafkaMessageListner:59 - Consumer connector created successfully
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], begin registering consumer groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4 in ZK
+2016-04-06 18:53:36 INFO  ZKCheckedEphemeral:68 - Creating /consumers/groupid11/ids/groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4 (is it secure? false)
+2016-04-06 18:53:36 INFO  ZKCheckedEphemeral:68 - Result of znode creation is: OK
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], end registering consumer groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4 in ZK
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], starting watcher executor thread for consumer groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], begin rebalancing consumer groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4 try #0
+2016-04-06 18:53:36 INFO  ConsumerFetcherManager:68 - [ConsumerFetcherManager-1459949016361] Stopping leader finder thread
+2016-04-06 18:53:36 INFO  ConsumerFetcherManager:68 - [ConsumerFetcherManager-1459949016361] Stopping all fetchers
+2016-04-06 18:53:36 INFO  ConsumerFetcherManager:68 - [ConsumerFetcherManager-1459949016361] All connections stopped
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], Cleared all relevant queues for this fetcher
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], Cleared the data chunks in all the consumer message iterators
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], Committing all offsets after clearing the fetcher queues
+2016-04-06 18:53:36 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], Releasing partition ownership
+2016-04-06 18:53:37 INFO  RangeAssignor:68 - Consumer groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4 rebalancing the following partitions: ArrayBuffer(0) for topic testtopic with consumers: List(groupid11_vithulan-ThinkPad-T530-1459948688342-dbfce291-0, groupid11_vithulan-ThinkPad-T530-1459948827133-f5e89427-0, groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4-0)
+2016-04-06 18:53:37 INFO  RangeAssignor:68 - groupid11_vithulan-ThinkPad-T530-1459948688342-dbfce291-0 attempting to claim partition 0
+2016-04-06 18:53:37 WARN  RangeAssignor:83 - No broker partitions consumed by consumer thread groupid11_vithulan-ThinkPad-T530-1459948827133-f5e89427-0 for topic testtopic
+2016-04-06 18:53:37 WARN  RangeAssignor:83 - No broker partitions consumed by consumer thread groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4-0 for topic testtopic
+2016-04-06 18:53:37 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], Consumer groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4 selected partitions : 
+2016-04-06 18:53:37 INFO  ZookeeperConsumerConnector:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4], end rebalancing consumer groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4 try #0
+2016-04-06 18:53:37 INFO  KafkaMessageListner:87 - Thread pool with 1 thread/s is initiated
+2016-04-06 18:53:37 INFO  ConsumerFetcherManager$LeaderFinderThread:68 - [groupid11_vithulan-ThinkPad-T530-1459949016157-c045b0e4-leader-finder-thread], Starting 
+2016-04-06 18:53:37 ERROR TCPClient:31 - Error while initiating TCP client Connection refused

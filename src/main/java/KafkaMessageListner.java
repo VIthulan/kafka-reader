@@ -2,6 +2,8 @@ import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +14,7 @@ import java.util.concurrent.Executors;
 
 
 public class KafkaMessageListner extends AbstractKafkaMessageListner {
-
+    private static final Log log = LogFactory.getLog(KafkaMessageListner.class);
     private KafkaProperties kafkaProperties;
     private ExecutorService executor;
 
@@ -27,11 +29,13 @@ public class KafkaMessageListner extends AbstractKafkaMessageListner {
     public void init(String zookeeper_host, String group_id_name, int threadsCount, List<String> topic) {
         kafkaProperties = new KafkaProperties(zookeeper_host,group_id_name,zookeeper_session_time_out,
                 zookeeper_sync_time_out,commit_interval);
+        log.info("Kafka consumer properties are set successfully");
         this.topics=topic;
         try {
             createKafkaConnector(threadsCount);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Error while creating consumer connector "+e.getMessage());
+            //e.printStackTrace();
         }
     }
 
@@ -52,13 +56,14 @@ public class KafkaMessageListner extends AbstractKafkaMessageListner {
         try {
             if (consumerConnector == null) {
                 consumerConnector = Consumer.createJavaConsumerConnector(kafkaProperties.getConsumerConfig());
-                System.out.println("Consumer connector created");
+                log.info("Consumer connector created successfully");
                 start(threadsCount);
             }
             isCreated = true;
         }
         catch (Exception e){
-            e.printStackTrace();
+           // e.printStackTrace();
+            log.error("Error while creating consumer connector "+e.getMessage());
         }
         return isCreated;
     }
@@ -78,9 +83,8 @@ public class KafkaMessageListner extends AbstractKafkaMessageListner {
                 consumerIteraror = new ArrayList<ConsumerIterator<byte[], byte[]>>();
                 List<KafkaStream<byte[], byte[]>> streams = consumerStreams
                         .get(topics.get(0));
-                System.out.println("topic "+topics.get(0));
                 executor = Executors.newFixedThreadPool(threadCount);
-
+                log.info("Thread pool with "+threadsCount+" thread/s is initiated");
                 /*for(String topic : topics) {
                     List<KafkaStream<byte[], byte[]>> streams = consumerStreams
                             .get(topic);
@@ -94,8 +98,9 @@ public class KafkaMessageListner extends AbstractKafkaMessageListner {
                 }
             }
         }catch (Exception e){
-            System.out.println(e);
-            e.printStackTrace();
+            log.error("Error while starting the consumer "+e.getMessage());
+          //  System.out.println(e);
+            //e.printStackTrace();
         }
     }
 
